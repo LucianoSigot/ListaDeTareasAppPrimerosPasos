@@ -39,12 +39,12 @@ function App() {
               <button className="boton-editar">🖋️</button>
               <button className='boton-borrar'>❌</button>
            </div>
-              <div className='todo-item'>
+            <div className='todo-item'>
               <input type="checkbox" ></input>
               <span>Task 2</span>
               <button className="boton-editar">🖋️</button>
               <button className='boton-borrar'>❌</button>
-           </div>
+            </div>
             <div className='todo-item'>
               <input type="checkbox" checked readOnly></input>
               <s><span>Completed Task 2</span></s>
