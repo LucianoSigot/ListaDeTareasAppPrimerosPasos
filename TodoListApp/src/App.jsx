@@ -18,32 +18,38 @@ function App() {
            <div className='todo-item'>
               <input type="checkbox"></input>
               <span>Task N</span>
-              <button className='boton-borrar'>🪧</button>
+              <button className="boton-editar" >🖋️</button>
+              <button className='boton-borrar'>❌</button>
            </div>
            <div className='todo-item'>
               <input type="checkbox"></input>
               <span>Task N-1</span>
-              <button className='boton-borrar'>🪧</button>
+              <button className="boton-editar">🖋️</button>
+              <button className='boton-borrar'>❌</button>
            </div>
             <div className='todo-item'>
               <input type="checkbox" checked readOnly></input>
               <s><span>Completed Task N-2</span></s>
-              <button className='boton-borrar'>🪧</button>
+              <button className="boton-editar">🖋️</button>
+              <button className='boton-borrar'>❌</button>
            </div>
             <div className='todo-item'>
               <input type="checkbox"></input>
               <span >Task k</span>
-              <button className='boton-borrar'>🪧</button>
+              <button className="boton-editar">🖋️</button>
+              <button className='boton-borrar'>❌</button>
            </div>
               <div className='todo-item'>
               <input type="checkbox" ></input>
               <span>Task 2</span>
-              <button className='boton-borrar'>🪧</button>
+              <button className="boton-editar">🖋️</button>
+              <button className='boton-borrar'>❌</button>
            </div>
             <div className='todo-item'>
               <input type="checkbox" checked readOnly></input>
               <s><span>Completed Task 2</span></s>
-              <button className='boton-borrar'>🪧</button>
+              <button className="boton-editar">🖋️</button>
+              <button className='boton-borrar'>❌</button>
            </div>
         </div>
          
