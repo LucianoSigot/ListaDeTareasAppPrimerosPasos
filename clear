@@ -1,0 +1,64 @@
+[1mdiff --git a/TodoListApp/src/App.css b/TodoListApp/src/App.css[m
+[1mindex c3c85..46262 100644[m
+[1m--- a/TodoListApp/src/App.css[m
+[1m+++ b/TodoListApp/src/App.css[m
+[36m@@ -49,15 +49,10 @@[m [mbody{[m
+  margin-left: 10px;[m
+}[m
+
+[31m[-.boton-editar,-][m
+[31m[-.boton-borrar {-][m[32m{+.boton-borrar{+}[m
+[32m{+  margin-left: auto;+}[m
+  cursor: pointer;[m
+  background: none;[m
+  border: none;[m
+  font-size: 16px;[m
+[31m[-  padding: 0 5px;-][m
+[31m[-}-][m
+
+[31m[-.boton-editar{-][m
+[31m[-  margin-left: auto; -][m
+}[m
+[1mdiff --git a/TodoListApp/src/App.jsx b/TodoListApp/src/App.jsx[m
+[1mindex f46b0..2bc9e 100644[m
+[1m--- a/TodoListApp/src/App.jsx[m
+[1m+++ b/TodoListApp/src/App.jsx[m
+[36m@@ -18,38 +18,32 @@[m [mfunction App() {[m
+           <div className='todo-item'>[m
+              <input type="checkbox"></input>[m
+              <span>Task N</span>[m
+              <button [31m[-className="boton-editar" >🖋️</button>-][m
+[31m[-              <button className='boton-borrar'>❌</button>-][m[32m{+className='boton-borrar'>🪧</button>+}[m
+           </div>[m
+           <div className='todo-item'>[m
+              <input type="checkbox"></input>[m
+              <span>Task N-1</span>[m
+              <button [31m[-className="boton-editar">🖋️</button>-][m
+[31m[-              <button className='boton-borrar'>❌</button>-][m[32m{+className='boton-borrar'>🪧</button>+}[m
+           </div>[m
+            <div className='todo-item'>[m
+              <input type="checkbox" checked readOnly></input>[m
+              <s><span>Completed Task N-2</span></s>[m
+              <button [31m[-className="boton-editar">🖋️</button>-][m
+[31m[-              <button className='boton-borrar'>❌</button>-][m[32m{+className='boton-borrar'>🪧</button>+}[m
+           </div>[m
+            <div className='todo-item'>[m
+              <input type="checkbox"></input>[m
+              <span >Task k</span>[m
+              <button [31m[-className="boton-editar">🖋️</button>-][m
+[31m[-              <button className='boton-borrar'>❌</button>-][m[32m{+className='boton-borrar'>🪧</button>+}[m
+           </div>[m
+              <div className='todo-item'>
+              <input type="checkbox" ></input>[m
+              <span>Task 2</span>[m
+              <button [31m[-className="boton-editar">🖋️</button>-][m
+[31m[-              <button className='boton-borrar'>❌</button>-][m[32m{+className='boton-borrar'>🪧</button>+}[m
+           </div>
+            <div className='todo-item'>[m
+              <input type="checkbox" checked readOnly></input>[m
+              <s><span>Completed Task 2</span></s>[m
+              <button [31m[-className="boton-editar">🖋️</button>-][m
+[31m[-              <button className='boton-borrar'>❌</button>-][m[32m{+className='boton-borrar'>🪧</button>+}[m
+           </div>[m
+        </div>[m
+         [m
