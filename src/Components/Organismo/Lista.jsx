@@ -12,7 +12,7 @@ function Lista (){
     return(
         <div className='Contenedor'>
             <Titulo>Lista de Luciano Sigot</Titulo>
-            <AddComp></AddComp>
+            <AddComp onCambio = {agregarTarea}></AddComp>
             <ol>
                 <li><ListItems tarea={tarea}></ListItems></li>
             </ol>
