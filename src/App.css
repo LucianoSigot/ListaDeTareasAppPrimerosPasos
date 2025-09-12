@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.Contenedor {
+  max-width: 400px;
+  margin: auto;
+  padding: 10px 15px;
+  background-color: #333;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+
+.checkBox {
+  cursor: pointer;
+}
+
+.Titulo_lista {
+  color: black;
+  position: center;
+  margin: auto;
+}
+
+span{
+flex: 1;   
+margin-right: 10px;
+}
+.Boton{
+  gap: 5px;
+  background: none;
+  margin-left: auto;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Esto pone los botones al final */
+  padding: 8px;
+  border-bottom: 1px solid #555;
+  color: white;
+  gap: 10px; /* Separación entre texto y botones */
+}
+
