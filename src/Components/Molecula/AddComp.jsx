@@ -5,15 +5,19 @@ import { useState } from "react";
 function AddComp({onCambio}) {
     const [texto, setTexto] = useState("");
 
-    function agregarTexto(){
-        onCambio();
-        setTexto();
+    function agregarTexto(e){
+        e.preventDefault();
+        onCambio(texto); // Pasamos el texto como parámetro
+        setTexto(""); // Limpiamos el input después de agregar
     }
-    
+    const handleChange = (e) => {
+        setTexto(e.target.value);
+    };
+
     return (
         <>
-            <InputText mensaje="Agregar tarea"/>
-            <Boton tipo={"boton_agregar"}>Agregar</Boton>
+            <InputText mensaje="Agregar tarea" value={texto} onChange={handleChange}/>
+            <Boton tipo={"boton_agregar"} onClick= {agregarTexto}>Agregar</Boton>
         </>
     )
 }

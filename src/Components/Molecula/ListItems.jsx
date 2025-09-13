@@ -1,12 +1,12 @@
 import Boton from "../Atomo/Boton"
 import InputCheckBox from "../Atomo/InputCheckBox"
 import Span from "../Atomo/Span"
-function ListItems({tarea}){
+function ListItems({tarea, onEliminar}){
     return(
         <>
             <InputCheckBox/>
             <Span>{tarea}</Span>
-            <Boton>Eliminar</Boton>
+            <Boton tipo="eliminar" onClick={onEliminar}>Eliminar</Boton>
         </>
     )
 }

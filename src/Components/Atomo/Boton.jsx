@@ -1,7 +1,7 @@
 
-function Boton({children, tipo}){
+function Boton({children, tipo, onClick}){
     return (
-      <button className={tipo} >{children}</button>
+      <button className={tipo} onClick={onClick}>{children}</button>
     )
 }
 

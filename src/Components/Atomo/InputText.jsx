@@ -1,8 +1,8 @@
 
-function InputText({mensaje}){
+function InputText({mensaje, value, onChange}){
     
     return(
-        <input type="text" placeholder={mensaje}/>
+        <input type="text" placeholder={mensaje} value={value} onChange={onChange}/>
     )
 }
 
