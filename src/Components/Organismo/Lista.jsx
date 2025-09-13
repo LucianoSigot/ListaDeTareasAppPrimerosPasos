@@ -2,12 +2,16 @@ import ListItems from '../Molecula/ListItems'
 import AddComp from '../Molecula/AddComp'
 import Titulo from '../Atomo/Titulo'
 import { useState } from 'react'
+import Selector from '../Atomo/Selector'
 
-function Lista (){
+function Lista(){
     const [tarea, setTarea] = useState([]);
-
+    const [ordenInverso, setOrdenInverso] = useState(true);
+    
     function agregarTarea(nuevaTarea){
-        setTarea([...tarea,{ texto: nuevaTarea, completa: false }]);
+        if(nuevaTarea.trim() !== "") {
+            setTarea([...tarea, { texto: nuevaTarea, completa: false }]);
+        }
     }
 
     function eliminarTarea(indice){
@@ -15,38 +19,50 @@ function Lista (){
     }
     
     function tareaCompletada(indice){
-        setTarea(tarea.map(function(t, i){
-            if(i === indice){
-                return { texto: t.texto, completa: !t.completa}
-            }else{
-                return t;
+        setTarea(tarea.map((t, i) => {
+            if(i === indice) {
+                return { ...t, completa: !t.completa };
             }
-        }))
+            return t;
+        }));
+    }
+
+    function obtenerListaOrdenada(tareas, ordenInverso){
+        if(ordenInverso) {
+            return [...tareas];
+        }
+        return [...tareas].reverse();
+    }
+    
+    function obtenerIndiceReal(indiceActual) {
+        return ordenInverso ? indiceActual : tarea.length - 1 - indiceActual;
     }
 
     return (
         <div className='Contenedor'>
-            <Titulo>Lista de Luciano Sigot</Titulo>
-            <AddComp onCambio={agregarTarea} />
+            <Titulo>Lista de Luciano Sigot</Titulo> 
+            <div className="controles">
+                <AddComp onCambio={agregarTarea} />
+                <Selector valor={ordenInverso} onCambio={setOrdenInverso} />
+            </div>
             {tarea.length === 0 ? (
-                <p>No hay tareas, la lista está vacía</p>
+                <p className="lista-vacia">No hay tareas, la lista está vacía</p>
             ) : (
                 <ol>
-                    {tarea.map((t, index) => (
+                    {obtenerListaOrdenada(tarea, ordenInverso).map((t, index) => (
                         <li key={index}>
                             <ListItems 
-                                onClick={ () =>  tareaCompletada(index) }
-                                style={{ textDecoration: t.completa ? 'line-through' : 'none', cursor: 'pointer' }}
-                                tarea={t.texto} 
-                                onEliminar={() => eliminarTarea(index)} 
+                                onClick={() => tareaCompletada(obtenerIndiceReal(index))}
+                                style={{ textDecoration: t.completa ? 'line-through' : 'none' }}
+                                tarea={t.texto}
+                                onEliminar={() => eliminarTarea(obtenerIndiceReal(index))} 
                             />
                         </li>
                     ))}
                 </ol>
-               
             )}
         </div>
-    )
+    );
 }
 
 export default Lista;
