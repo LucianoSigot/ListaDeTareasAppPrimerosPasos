@@ -1,8 +1,7 @@
 
-function Span({children}){
-
+function Span({children, style}){
     return(
-        <span>{children}</span>
+        <span style={style}>{children}</span>
     )
 }
 

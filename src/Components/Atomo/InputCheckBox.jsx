@@ -1,7 +1,7 @@
 
-function InputCheckBox() {
+function InputCheckBox({onClick}) {
     return (
-        <input type="checkbox" className="checkBox"/>
+        <input type="checkbox" className="checkBox" onClick={onClick}/>
     )
 }
 
