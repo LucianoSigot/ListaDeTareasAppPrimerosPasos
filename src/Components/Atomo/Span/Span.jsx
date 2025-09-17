@@ -1,7 +1,7 @@
 import "./Span.css"
-function Span({children, style}){
+function Span({children, style, styleColor}){
     return(
-        <span style={style}>{children}</span>
+        <span style={style} styleColor={styleColor}>{children}</span>
     )
 }
 

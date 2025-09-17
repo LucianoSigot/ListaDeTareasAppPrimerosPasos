@@ -23,6 +23,10 @@ ol {
   margin: 1.5rem 0;
 }
 
+h1, span {
+  color: #2c3e50;
+}
+
 li {
   display: flex;
   align-items: center;
@@ -31,7 +35,6 @@ li {
   background-color: #f8f9fa;
   border-radius: 8px;
   transition: all 0.3s ease;
-  color: #2c3e50;
   gap: 1rem;
 }
 

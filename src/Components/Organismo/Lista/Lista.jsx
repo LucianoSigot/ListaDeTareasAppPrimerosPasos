@@ -1,13 +1,15 @@
 import ListItems from "../../Molecula/ListItems/ListItems"
 import AddComp from "../../Molecula/AddComponent/AddComp"
 import Titulo from "../../Atomo/Titulo/Titulo"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Selector from "../../Atomo/Selector/Selector"
 import "./Lista.css"
+import "./ModoNoche.css"
 
 function Lista(){
     const [tarea, setTarea] = useState([]);
     const [ordenInverso, setOrdenInverso] = useState(true);
+    const [modoOscuro, setModoOscuro] = useState(false);
     
     function agregarTarea(nuevaTarea){
         if(nuevaTarea.trim() !== "") {
@@ -39,9 +41,25 @@ function Lista(){
         return ordenInverso ? indiceActual : tarea.length - 1 - indiceActual;
     }
 
+    function cambioDeModo() {
+        setModoOscuro(!modoOscuro);
+    }
+
+    useEffect(() => {
+        if (modoOscuro){
+            document.body.classList.add("dark-mode")
+        } else { 
+            document.body.classList.remove("dark-mode");
+         }
+    }, [modoOscuro]);
+
     return (
+        <>
+        <button onClick={cambioDeModo}>
+            {modoOscuro ? "☀️ Modo Claro" : "🌙 Modo Oscuro"}
+        </button>
         <div className='Contenedor'>
-            <Titulo>Lista de Luciano Sigot</Titulo> 
+            <Titulo style={{ color: modoOscuro ? '#ffffff' : '#2c3e50' }}>Lista de Luciano Sigot</Titulo> 
             <div className="controles">
                 <AddComp onCambio={agregarTarea} />
                 <Selector valor={ordenInverso} onCambio={setOrdenInverso} />
@@ -56,6 +74,7 @@ function Lista(){
                                 onClick={() => tareaCompletada(obtenerIndiceReal(index))}
                                 completa={t.completa}
                                 style={{ textDecoration: t.completa ? 'line-through' : 'none' }}
+                                styleColor= {{color: modoOscuro ? '#1e1e1e;' : '#ffffff'}}
                                 tarea={t.texto}
                                 onEliminar={() => eliminarTarea(obtenerIndiceReal(index))} 
                             />
@@ -64,7 +83,9 @@ function Lista(){
                 </ol>
             )}
         </div>
+        </>
     );
+    
 }
 
 export default Lista;
