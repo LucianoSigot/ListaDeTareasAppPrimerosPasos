@@ -1,4 +1,4 @@
-import "./Span.css"
+import "./Span.scss"
 function Span({children, style, styleColor}){
     return(
         <span style={style} styleColor={styleColor}>{children}</span>

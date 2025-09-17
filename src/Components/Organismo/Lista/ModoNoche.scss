@@ -1,0 +1,18 @@
+body.dark-mode {
+  .Contenedor {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  h1, span {
+    color: #ffffff;
+  }
+
+  li {
+    background-color: #2c2c2c;
+  }
+
+  .lista-vacia {
+    color: #b0b0b0;
+  }
+}

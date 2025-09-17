@@ -1,4 +1,4 @@
-import "./Boton.css"
+import "./Boton.scss"
 
 function Boton({children, tipo, onClick}){
     return (

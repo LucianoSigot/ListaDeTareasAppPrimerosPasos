@@ -1,4 +1,4 @@
-import "./Titulo.css"
+import "./Titulo.scss"
 function Titulo ({children, style}){
     return (
         <h3 className="Titulo_lista" style={style}>{children}</h3>

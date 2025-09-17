@@ -3,8 +3,8 @@ import AddComp from "../../Molecula/AddComponent/AddComp"
 import Titulo from "../../Atomo/Titulo/Titulo"
 import { useState, useEffect } from 'react'
 import Selector from "../../Atomo/Selector/Selector"
-import "./Lista.css"
-import "./ModoNoche.css"
+import "./Lista.scss"
+import "./ModoNoche.scss"
 
 function Lista(){
     const [tarea, setTarea] = useState([]);

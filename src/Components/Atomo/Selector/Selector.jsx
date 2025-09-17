@@ -1,4 +1,4 @@
-import "./Selector.css"
+import "./Selector.scss"
 function Selector({ valor, onCambio }) {
   return (
     <select value={valor} onChange={function(e) { onCambio(e.target.value === 'true') }}>
