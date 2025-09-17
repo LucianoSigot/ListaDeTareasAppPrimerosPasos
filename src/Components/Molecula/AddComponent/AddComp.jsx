@@ -1,5 +1,5 @@
-import Boton from "../Atomo/Boton"
-import InputText from "../Atomo/InputText"
+import Boton from "../../Atomo/Boton/Boton"
+import InputText from "../../Atomo/InputText/InputText"
 import { useState } from "react";
 
 function AddComp({onCambio}) {

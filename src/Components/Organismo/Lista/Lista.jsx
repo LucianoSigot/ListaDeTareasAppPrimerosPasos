@@ -1,8 +1,9 @@
-import ListItems from '../Molecula/ListItems'
-import AddComp from '../Molecula/AddComp'
-import Titulo from '../Atomo/Titulo'
+import ListItems from "../../Molecula/ListItems/ListItems"
+import AddComp from "../../Molecula/AddComponent/AddComp"
+import Titulo from "../../Atomo/Titulo/Titulo"
 import { useState } from 'react'
-import Selector from '../Atomo/Selector'
+import Selector from "../../Atomo/Selector/Selector"
+import "./Lista.css"
 
 function Lista(){
     const [tarea, setTarea] = useState([]);
@@ -53,6 +54,7 @@ function Lista(){
                         <li key={index}>
                             <ListItems 
                                 onClick={() => tareaCompletada(obtenerIndiceReal(index))}
+                                completa={t.completa}
                                 style={{ textDecoration: t.completa ? 'line-through' : 'none' }}
                                 tarea={t.texto}
                                 onEliminar={() => eliminarTarea(obtenerIndiceReal(index))} 

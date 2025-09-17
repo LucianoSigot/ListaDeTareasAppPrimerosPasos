@@ -1,12 +1,9 @@
-import  Lista from '../src/Components/Organismo/Lista'
+import Lista from './Components/Organismo/Lista/Lista'
 import './App.css'
+
 function App() {
-  //Templade
-  return (
-    <>
-     <Lista/>
-    </>
-  )
+  // Template
+  return <Lista />
 }
 
 export default App

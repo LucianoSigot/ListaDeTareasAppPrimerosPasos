@@ -1,4 +1,4 @@
-
+import "./InputText.css"
 function InputText({mensaje, value, onChange}){
     
     return(

@@ -1,0 +1,50 @@
+.Contenedor {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Controles (AddComp y Selector) */
+.controles {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lista de tareas */
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+  gap: 1rem;
+}
+
+li:hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+}
+
+
+/* Mensaje de lista vacía */
+.lista-vacia {
+  color: #95a5a6;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  text-align: center;
+}

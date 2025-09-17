@@ -1,3 +1,4 @@
+import "./Boton.css"
 
 function Boton({children, tipo, onClick}){
     return (
